@@ -38,7 +38,7 @@ func (apiCfg *apiConfig) handlerCreateFeed(
 	})
 
 	if err != nil {
-		respondWithError(w, 400, fmt.Sprintf("Error creating user: %v", err))
+		respondWithError(w, 400, fmt.Sprintf("Error creating feed: %v", err))
 		return
 	}
 
