@@ -30,8 +30,8 @@ func (apiCfg *apiConfig) handlerCreateFeedFollow(
 
 	feedFollow, err := apiCfg.DB.CreateFeedFollow(r.Context(), database.CreateFeedFollowParams{
 		ID:        uuid.New(),
-		CreatedAt: time.Now(),
-		UpdatedAt: time.Now(),
+		CreatedAt: time.Now().UTC(),
+		UpdatedAt: time.Now().UTC(),
 		FeedID:    params.FeedID,
 		UserID:    user.ID,
 	})

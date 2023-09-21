@@ -30,8 +30,8 @@ func (apiCfg *apiConfig) handlerCreateFeed(
 
 	feed, err := apiCfg.DB.CreateFeeds(r.Context(), database.CreateFeedsParams{
 		ID:        uuid.New(),
-		CreatedAt: time.Now(),
-		UpdatedAt: time.Now(),
+		CreatedAt: time.Now().UTC(),
+		UpdatedAt: time.Now().UTC(),
 		Name:      params.Name,
 		Url:       params.Url,
 		UserID:    user.ID,
